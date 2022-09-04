@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9450B98D28C26D0500C1A1EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9450B98C28C26D0500C1A1EF /* main.cpp */; };
+		9450B99528C26DB900C1A1EF /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9450B99428C26DB900C1A1EF /* libSDL2-2.0.0.dylib */; };
+		9450B99928C26E8400C1A1EF /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9450B99728C26E8400C1A1EF /* Game.cpp */; };
+		9450B9A228C275DC00C1A1EF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9450B9A128C275DC00C1A1EF /* OpenGL.framework */; };
+		9450B9A428C275F000C1A1EF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9450B9A328C275F000C1A1EF /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9450B98928C26D0500C1A1EF /* Game Loop */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Game Loop"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9450B98928C26D0500C1A1EF /* Pong Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Pong Game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9450B98C28C26D0500C1A1EF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9450B99428C26DB900C1A1EF /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../../../usr/local/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		9450B99728C26E8400C1A1EF /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		9450B99828C26E8400C1A1EF /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		9450B99D28C275A900C1A1EF /* libSDL2_image-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2_image-2.0.0.dylib"; path = "../../../../../../../usr/local/lib/libSDL2_image-2.0.0.dylib"; sourceTree = "<group>"; };
+		9450B9A128C275DC00C1A1EF /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		9450B9A328C275F000C1A1EF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9450B9A428C275F000C1A1EF /* CoreFoundation.framework in Frameworks */,
+				9450B9A228C275DC00C1A1EF /* OpenGL.framework in Frameworks */,
+				9450B99528C26DB900C1A1EF /* libSDL2-2.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,33 +54,55 @@
 		9450B98028C26D0500C1A1EF = {
 			isa = PBXGroup;
 			children = (
-				9450B98B28C26D0500C1A1EF /* Game Loop */,
+				9450B98B28C26D0500C1A1EF /* Pong Game */,
 				9450B98A28C26D0500C1A1EF /* Products */,
+				9450B99328C26DB900C1A1EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		9450B98A28C26D0500C1A1EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9450B98928C26D0500C1A1EF /* Game Loop */,
+				9450B98928C26D0500C1A1EF /* Pong Game */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9450B98B28C26D0500C1A1EF /* Game Loop */ = {
+		9450B98B28C26D0500C1A1EF /* Pong Game */ = {
 			isa = PBXGroup;
 			children = (
+				9450B99628C26E6E00C1A1EF /* Game */,
 				9450B98C28C26D0500C1A1EF /* main.cpp */,
 			);
-			path = "Game Loop";
+			path = "Pong Game";
+			sourceTree = "<group>";
+		};
+		9450B99328C26DB900C1A1EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9450B9A328C275F000C1A1EF /* CoreFoundation.framework */,
+				9450B9A128C275DC00C1A1EF /* OpenGL.framework */,
+				9450B99D28C275A900C1A1EF /* libSDL2_image-2.0.0.dylib */,
+				9450B99428C26DB900C1A1EF /* libSDL2-2.0.0.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9450B99628C26E6E00C1A1EF /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				9450B99728C26E8400C1A1EF /* Game.cpp */,
+				9450B99828C26E8400C1A1EF /* Game.hpp */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9450B98828C26D0500C1A1EF /* Game Loop */ = {
+		9450B98828C26D0500C1A1EF /* Pong Game */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9450B99028C26D0500C1A1EF /* Build configuration list for PBXNativeTarget "Game Loop" */;
+			buildConfigurationList = 9450B99028C26D0500C1A1EF /* Build configuration list for PBXNativeTarget "Pong Game" */;
 			buildPhases = (
 				9450B98528C26D0500C1A1EF /* Sources */,
 				9450B98628C26D0500C1A1EF /* Frameworks */,
@@ -77,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = "Game Loop";
+			name = "Pong Game";
 			productName = "Game Loop";
-			productReference = 9450B98928C26D0500C1A1EF /* Game Loop */;
+			productReference = 9450B98928C26D0500C1A1EF /* Pong Game */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9450B98428C26D0500C1A1EF /* Build configuration list for PBXProject "Game Loop" */;
+			buildConfigurationList = 9450B98428C26D0500C1A1EF /* Build configuration list for PBXProject "Pong Game" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9450B98828C26D0500C1A1EF /* Game Loop */,
+				9450B98828C26D0500C1A1EF /* Pong Game */,
 			);
 		};
 /* End PBXProject section */
@@ -120,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9450B98D28C26D0500C1A1EF /* main.cpp in Sources */,
+				9450B99928C26E8400C1A1EF /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +275,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +285,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -254,7 +294,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9450B98428C26D0500C1A1EF /* Build configuration list for PBXProject "Game Loop" */ = {
+		9450B98428C26D0500C1A1EF /* Build configuration list for PBXProject "Pong Game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9450B98E28C26D0500C1A1EF /* Debug */,
@@ -263,7 +303,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9450B99028C26D0500C1A1EF /* Build configuration list for PBXNativeTarget "Game Loop" */ = {
+		9450B99028C26D0500C1A1EF /* Build configuration list for PBXNativeTarget "Pong Game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9450B99128C26D0500C1A1EF /* Debug */,
