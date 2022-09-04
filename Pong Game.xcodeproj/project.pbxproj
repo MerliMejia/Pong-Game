@@ -54,7 +54,7 @@
 		9450B98028C26D0500C1A1EF = {
 			isa = PBXGroup;
 			children = (
-				9450B98B28C26D0500C1A1EF /* Pong Game */,
+				9450B98B28C26D0500C1A1EF /* src */,
 				9450B98A28C26D0500C1A1EF /* Products */,
 				9450B99328C26DB900C1A1EF /* Frameworks */,
 			);
@@ -68,13 +68,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9450B98B28C26D0500C1A1EF /* Pong Game */ = {
+		9450B98B28C26D0500C1A1EF /* src */ = {
 			isa = PBXGroup;
 			children = (
 				9450B99628C26E6E00C1A1EF /* Game */,
 				9450B98C28C26D0500C1A1EF /* main.cpp */,
 			);
-			path = "Pong Game";
+			path = src;
 			sourceTree = "<group>";
 		};
 		9450B99328C26DB900C1A1EF /* Frameworks */ = {
